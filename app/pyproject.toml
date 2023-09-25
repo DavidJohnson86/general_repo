@@ -12,6 +12,7 @@ ruff = "^0.0.291"
 pre-commit = "^3.4.0"
 fastapi = "^0.103.1"
 hypercorn = "^0.14.4"
+sqlalchemy = "^2.0.21"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -28,6 +29,7 @@ build-backend = "poetry.core.masonry.api"
 # McCabe complexity (`C901`) by default.
 select = ["E", "F"]
 ignore = []
+
 
 # Allow autofix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]

@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 from controller.dto import CatToyDTO
 app = FastAPI()
+from application.use_cases import CatToyService
 
+def init_cat_toy_service():
+    db_repository = None
+    return CatToyService(db_repository=)
 
 @app.get("/")
 async def read_root() -> dict[str, str]:
@@ -10,6 +14,7 @@ async def read_root() -> dict[str, str]:
 
 @app.post("/cat-toys/")
 async def create_cat_toy(toy: CatToyDTO):
+    create_cat_toy = CatToyService()
     # Assuming you have some data store (e.g., a database) to store the cat toy
     # Here, we'll just return the created cat toy as an example
     return toy
